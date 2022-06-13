@@ -599,6 +599,8 @@ func (p *partitionProducer) failTimeoutMessages() {
 					if nextWaiting := diff(pi.sentAt); nextWaiting > 0 {
 						// current and subsequent items not timeout yet, stop iterating
 						tickerNeedWaiting = nextWaiting
+						p.log.Infof("Putting back items %+v", item)
+						p.pendingQueue.Put(item)
 						return false
 					}
 					return true
@@ -864,11 +866,10 @@ func (p *partitionProducer) internalClose(req *closeProducer) {
 		p.log.WithError(err).Warn("Failed to close batch builder")
 	}
 
+	close(p.closeCh)
 	p.setProducerState(producerClosed)
 	p._getConn().UnregisterListener(p.producerID)
 	p.batchFlushTicker.Stop()
-
-	close(p.closeCh)
 }
 
 func (p *partitionProducer) LastSequenceID() int64 {

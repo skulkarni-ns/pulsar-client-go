@@ -400,7 +400,7 @@ func (p *partitionProducer) Name() string {
 }
 
 func (p *partitionProducer) internalSend(request *sendRequest) {
-	p.log.Debug("Received send request: ", *request)
+	p.log.Infof("Received send request: ", *request)
 
 	msg := request.msg
 
@@ -744,6 +744,7 @@ func (p *partitionProducer) internalSendAsync(ctx context.Context, msg *Producer
 	callback func(MessageID, *ProducerMessage, error), flushImmediately bool) {
 	if p.getProducerState() != producerReady {
 		// Producer is closing
+		p.log.Infof("Producer is in closed state. p %+v msg %+v", p, msg)
 		callback(nil, msg, errProducerClosed)
 		return
 	}

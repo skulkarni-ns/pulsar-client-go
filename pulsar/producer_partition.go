@@ -400,8 +400,6 @@ func (p *partitionProducer) Name() string {
 }
 
 func (p *partitionProducer) internalSend(request *sendRequest) {
-	p.log.Infof("Received send request: ", *request)
-
 	msg := request.msg
 
 	// read payload from message

@@ -30,9 +30,9 @@ import (
 	"github.com/skulkarni-ns/pulsar-client-go/pulsar/internal"
 	"github.com/stretchr/testify/assert"
 
+	log "github.com/sirupsen/logrus"
 	"github.com/skulkarni-ns/pulsar-client-go/pulsar/crypto"
 	plog "github.com/skulkarni-ns/pulsar-client-go/pulsar/log"
-	log "github.com/sirupsen/logrus"
 )
 
 func TestInvalidURL(t *testing.T) {

@@ -25,8 +25,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/skulkarni-ns/pulsar-client-go/pulsar/log"
 	"github.com/sirupsen/logrus"
+	"github.com/skulkarni-ns/pulsar-client-go/pulsar/log"
 )
 
 type cancelReader struct {

@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/skulkarni-ns/pulsar-client-go/pulsar"
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/mocktracer"
+	"github.com/skulkarni-ns/pulsar-client-go/pulsar"
 	"github.com/stretchr/testify/assert"
 )
 

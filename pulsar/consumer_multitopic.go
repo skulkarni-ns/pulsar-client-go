@@ -24,8 +24,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/skulkarni-ns/pulsar-client-go/pulsar/internal"
 	pkgerrors "github.com/pkg/errors"
+	"github.com/skulkarni-ns/pulsar-client-go/pulsar/internal"
 
 	"github.com/skulkarni-ns/pulsar-client-go/pulsar/log"
 )

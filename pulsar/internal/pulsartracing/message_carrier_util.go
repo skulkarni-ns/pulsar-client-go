@@ -20,9 +20,9 @@ package pulsartracing
 import (
 	"context"
 
-	"github.com/skulkarni-ns/pulsar-client-go/pulsar"
 	"github.com/opentracing/opentracing-go"
 	log "github.com/sirupsen/logrus"
+	"github.com/skulkarni-ns/pulsar-client-go/pulsar"
 )
 
 func InjectProducerMessageSpanContext(ctx context.Context, message *pulsar.ProducerMessage) {

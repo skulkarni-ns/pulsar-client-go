@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"io"
 
-	pb "github.com/skulkarni-ns/pulsar-client-go/pulsar/internal/pulsar_proto"
 	"github.com/gogo/protobuf/proto"
+	pb "github.com/skulkarni-ns/pulsar-client-go/pulsar/internal/pulsar_proto"
 )
 
 type connectionReader struct {

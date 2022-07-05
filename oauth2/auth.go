@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/skulkarni-ns/pulsar-client-go/oauth2/clock"
 	"github.com/golang-jwt/jwt"
+	"github.com/skulkarni-ns/pulsar-client-go/oauth2/clock"
 	"golang.org/x/oauth2"
 )
 

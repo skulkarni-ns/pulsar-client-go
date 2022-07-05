@@ -25,8 +25,8 @@ import (
 
 	"github.com/skulkarni-ns/pulsar-client-go/pulsar/log"
 
-	pb "github.com/skulkarni-ns/pulsar-client-go/pulsar/internal/pulsar_proto"
 	"github.com/gogo/protobuf/proto"
+	pb "github.com/skulkarni-ns/pulsar-client-go/pulsar/internal/pulsar_proto"
 )
 
 var (

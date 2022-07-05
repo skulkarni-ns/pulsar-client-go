@@ -31,8 +31,8 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/skulkarni-ns/pulsar-client-go/pulsar"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"github.com/skulkarni-ns/pulsar-client-go/pulsar"
 )
 
 // FlagProfile is a global flag

@@ -597,8 +597,6 @@ func (p *partitionProducer) failTimeoutMessages() {
 					if nextWaiting := diff(pi.sentAt); nextWaiting > 0 {
 						// current and subsequent items not timeout yet, stop iterating
 						tickerNeedWaiting = nextWaiting
-						p.log.Infof("Putting back items %+v", item)
-                        //p.pendingQueue.Put(item)
 						return false
 					}
 					return true
